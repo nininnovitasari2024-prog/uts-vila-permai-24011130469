@@ -19,4 +19,4 @@ Aplikasi web interaktif untuk pemesanan akomodasi Vila Permai yang dilengkapi de
 * [x] Fitur Pencarian Vila & LocalStorage (Selesai)
 
 ## Tangkapan Layar (Screenshot)
-![Tampilan Halaman Web Vila Permai](halaman_web.png)
+![Tampilan Halaman Web Vila Permai](screenshot.png)
