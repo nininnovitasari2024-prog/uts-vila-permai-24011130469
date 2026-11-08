@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vila Permai - Malang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header__container">
+            <h1>Vila Permai</h1>
+            <p>Hunian Nyaman di Kawasan Batu</p>
+        </div>
+    </header>
+
+    <nav class="site-nav">
+        <div class="site-nav__container">
+            <a href="#daftar-vila" class="nav-link active" data-target="daftar-vila">Daftar Vila</a>
+            <a href="#form-pemesanan" class="nav-link" data-target="form-pemesanan">Pesan Sekarang</a>
+            <a href="#kontak" class="nav-link" data-target="kontak">Kontak</a>
+        </div>
+    </nav>
+
+    <main class="site-main">
+        <section id="daftar-vila" class="content-section active">
+            <h2>Pilihan Vila Kami</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Cari berdasarkan nama vila...">
+            </div>
+            <div id="vilaContainer" class="vila-grid"></div>
+        </section>
+
+        <!--Pemesanan--> 
+        <section id="form-pemesanan" class="content-section">
+            <h2>Formulir Pemesanan Vila</h2>
+            <form id="bookingForm" class="booking-form" novalidate>
+                <div class="form-group">
+                    <label for="namaTamu">Nama Tamu:</label>
+                    <input type="text" id="namaTamu" name="namaTamu" required>
+                    <small id="namaError" class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="selectVila">Pilih Unit Vila:</label>
+                    <select id="selectVila" name="selectVila" required></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkIn">Tanggal Check-in:</label>
+                    <input type="date" id="checkIn" name="checkIn" required>
+                    <small id="checkInError" class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkOut">Tanggal Check-out:</label>
+                    <input type="date" id="checkOut" name="checkOut" required>
+                    <small id="checkOutError" class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="jumlahTamu">Jumlah Tamu (1 - 10 orang):</label>
+                    <input type="number" id="jumlahTamu" name="jumlahTamu" min="1" max="10" value="1" required>
+                    <small id="tamuError" class="error-message"></small>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="btnCek" class="btn btn-secondary">Cek Ketersediaan</button>
+                    <button type="submit" class="btn btn-primary">Pesan Sekarang</button>
+                </div>
+            </form>
+
+            <div id="resultArea" class="result-area hidden">
+                <h3>Ringkasan Pesanan Terkirim</h3>
+                <div id="resultContent"></div>
+            </div>
+        </section>
+
+        <!--Kontak-->
+        <section id="kontak" class="content-section">
+            <h2>Kontak Pemilik Vila</h2>
+            <article class="contact-card">
+                <p><strong>Pengelola:</strong> Manajemen Vila Permai</p>
+                <p><strong>Alamat:</strong> Batu, Malang (Jawa Timur)</p>
+                <p><strong>Telepon:</strong> 0864-7892-6631</p>
+                <p><strong>Email:</strong>vilapermai@gmail.com</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Vila Permai. Hak Cipta Dilindungi.</p>
+        <p id="welcomeBackMessage" class="welcome-message"></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
